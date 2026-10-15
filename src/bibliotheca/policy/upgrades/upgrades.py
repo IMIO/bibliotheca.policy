@@ -101,6 +101,14 @@ def set_login_modal(context):
     configure_login_modal(portal)
 
 
+def fix_faceted_js_errors(context):
+    setup_tool = getToolByName(context, "portal_setup")
+    setup_tool.runImportStepFromProfile(
+        "profile-bibliotheca.policy:default", "plone.app.registry"
+    )
+    set_login_modal(context)
+
+
 def fix_library_rename(context):
     """Clean up persisted references to the old ``library.*`` package names.
 

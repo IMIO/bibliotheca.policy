@@ -237,4 +237,13 @@
     handler=".upgrades.fix_library_rename"
     />
 
+  <genericsetup:upgradeStep
+    source="1018"
+    destination="1019"
+    title="Fix JS errors on faceted views"
+    description="Load faceted bundles in order (select2) and write loadLinksWithinModal as a JSON boolean"
+    profile="bibliotheca.policy:default"
+    handler=".upgrades.fix_faceted_js_errors"
+    />
+
 </configure>

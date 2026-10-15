@@ -18,4 +18,15 @@
   <records interface="collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema" prefix="collective.behavior.banner.browser.controlpanel.IBannerSettingsSchema">
       <value key="banner_scale">banner</value>
   </records>
+  <!-- eea.facetednavigation loads these bundles with async, so faceted-view
+       can run before faceted-jquery has defined jQuery.fn.select2.
+       Defer only keeps them in document order. -->
+  <records prefix="plone.bundles/faceted.jquery" interface="Products.CMFPlone.interfaces.IBundleRegistry">
+    <value key="load_async">False</value>
+    <value key="load_defer">True</value>
+  </records>
+  <records prefix="plone.bundles/faceted.view" interface="Products.CMFPlone.interfaces.IBundleRegistry">
+    <value key="load_async">False</value>
+    <value key="load_defer">True</value>
+  </records>
 </registry>
