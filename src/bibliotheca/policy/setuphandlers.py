@@ -83,7 +83,7 @@ def configure_login_modal(portal):
             "title": "Log in",
             "width": "26em",
             "actionOptions": {"redirectOnResponse": True},
-            "loadLinksWithinModal": "False",
+            "loadLinksWithinModal": False,
         }
     )
     if login.hasProperty("modal"):
