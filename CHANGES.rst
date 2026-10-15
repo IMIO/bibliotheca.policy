@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.3 (unreleased)
+3.1.3 (2026-10-15)
 ------------------
 
 - Add upgrade step (1018 -> 1019) fixing two JS errors on faceted views:
